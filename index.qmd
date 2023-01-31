@@ -19,9 +19,10 @@ Include a _very brief_ summary of what you learnt in this class here.
 
 Today, I learnt the following concepts in class:
 
-1. Item 1
-1. Item 2
-1. Item 3
+1. Exploratory Data Analysis
+1. The definition of clean data
+1. Examples of data verbs
+
 :::
 
 Provide more concrete details here. You can also use footenotes[^footnote] if you like
@@ -32,16 +33,25 @@ library(dplyr)
 library(purrr)
 ```
 
+In Class we learned the definition of exploratory data analysis:
 
-For example: 
-in class we learnt we learnt about the `map` function from the `purrr` package. 
+1.Exploratory data analysis is the process of analyzing and visualizing the data to get a better understanding of it.
+1.dplyr and ggplot2 are used to facilitate it.
 
 
-```{R results='hide', fig.width=7, fig.height=7}
-par(mfrow=c(3, 3), mar=c(3.5, 3.5, 2, 1), mgp=c(2.4, 0.8, 0))
-map(1:9, function(i)rnorm(1000) %>% hist(., main=i, col=i))
-```
+In class we learned about the characteristics of clean data:
 
+1.Each case should be a different value
+1.Every variable should have its own column
+1.Every observation its own row
+1.Every cell a unique value
+
+
+We also learned about important data verbs which include:
+
+1.select - selects a subset of columns
+1.mutate - create new columns from existing ones
+1.filter - selects a subset of rows
 
 
 ## Thursday, Jan 19
@@ -55,22 +65,25 @@ Include a _very brief_ summary of what you learnt in this class here.
 
 Today, I learnt the following concepts in class:
 
-1. Item 1
-1. Item 2
-1. Item 3
+1. Basics of ggthemeassist
+1. The different data types
+1. Factors and ways to arrange them
 :::
 
 Provide more concrete details here, e.g., 
 
-In class we learnt how to use the `map` function to create multiple regression diagnostic plots
+In class we learned about ggthemeassist:
 
-```{R results='hide', fig.height=4}
-par(mfcol=c(2, 3), mar=c(3.5, 3.5, 2, 1), mgp=c(2.4, 0.8, 0))
-mtcars %>%
-  split(.$cyl) %>%
-  map(~ lm(mpg ~ wt, data = .x)) %>%
-  map(function(x)plot(x, which=c(1, 2)))
-```
+1.ggthemeassist is a feature of ggplot2 that allows you to easily alter aspects of a ggplot
 
+We also learned about the different data types:
 
-[^footnote]: You can include some footnotes here
+1.String e.g. "this is a character"
+1.Integer e.g. [1,2,3]
+1.Double e.g. [2.2, 3.14159, 0.9]
+1.Booleans e.g. TRUE/FALSE
+
+Finally we learned about factors:
+
+1.Factors in R are categorical variables
+1.as.factor-allows you to reorder factors
